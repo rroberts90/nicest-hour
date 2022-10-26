@@ -1,0 +1,133 @@
+:root {
+        --main-light-color : #FAF9F6;
+        --main-dark-color: #05283F;
+
+        --secondary-light-color : #bdc1c6;
+        --secondary-dark-color: black;
+        --primary-grey-blue: #2C5672 ;
+}
+
+/* Global Styles */
+input {
+        all: unset;
+    
+}
+
+body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        letter-spacing: .025em;
+
+}
+
+h1 { 
+        text-align: center;
+        font-size: 45px;
+        padding-top: .25em;
+}
+
+h2 {
+        text-align: center;
+        font-size: 20px;
+        padding: 0px;
+}
+
+/* Search Styles */
+.search-bar {
+        width: 40vw;
+        height:  5vh;
+        border: 0px;
+        border-radius: 25px;
+        border-style: solid;
+        margin: auto;
+        padding: .2em;
+        padding-left: .2em;
+
+        display: flex;
+        justify-content: flex-start; /* align horizontal */
+        align-items: center; /* align vertical */
+}
+.search-bar .prompt { 
+        padding-left: .5rem;
+        width: 100%;
+        height: 100%;
+}
+
+/* Results Styles */
+
+h3 {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: larger;
+}
+
+#results {
+        width: 50vw;
+        padding: 0px;
+        margin: auto;
+        margin-top: 2px;
+        border-radius: 10px;
+        background-color: var(--primary-grey-blue);
+}
+
+#results li {
+        border: 0px solid var(--secondary-light-color);
+        list-style-type: none;
+        padding: 1rem;
+        box-sizing: border-box;
+
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+
+}
+#results li div {
+        flex-grow:  1;
+        flex-basis: 50%;
+        text-align:start;
+}
+
+#results li .material-symbols-outlined {
+        padding-right: 1rem;
+}
+.locality {
+        
+}
+ 
+
+
+/* Color Styles */
+
+/* Light mode*/
+@media (prefers-color-scheme: light) {
+        body {
+            background-color: var(--main-light-color);
+            color: var(--secondary-dark-color);
+        }
+
+    }
+
+    /* Dark mode */
+@media (prefers-color-scheme: dark) {
+        body {
+            background-color: var(--main-dark-color);
+            color: var(--secondary-light-color);
+        }
+        h1 {
+                color: var(--secondary-light-color)
+        }
+
+        .search-bar{
+                border-color: var(--main-dark-color);
+                background-color: var(--main-light-color);
+        }
+
+        .pac-target-input {
+                color: var(--main-dark-color);
+        }
+ 
+
+    }
